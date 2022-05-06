@@ -84,6 +84,7 @@ a{
     margin-left: auto;
     margin-right: auto;
     background-color: #ffff;
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.5);
 } 
 .welcome{
     background: #e6686a;
@@ -156,3 +157,35 @@ hr{
     background: #cf5d5f;
 }
 
+main{
+    margin-top:-340px;
+}
+
+.download{
+    font-size: 14px;
+    line-height: 16px;
+    padding:21px 55px;
+    display: inline-block;
+    border: 1px solid #cdcfd1;
+    background: #efefef;
+    border-radius: 2px;
+    color: #3d4451;
+    font-weight: bold;
+    margin: 32px 0;
+    transition: box-shadow 0.2s;
+}
+.downloadwall{
+    text-align: center;
+}
+.download:hover{
+ box-shadow: 0px 4px 13px 0px rgba(0,0,0,0.2)
+}
+.selfIntroduction{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    line-height: 1.8;
+    font-size: 20px;
+    font-family: "楷体";
+}
