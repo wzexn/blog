@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
-  <title>Document</title>
+  <title>resume self</title>
   <script src="//at.alicdn.com/t/font_3373486_1uxpzcjtioe.js"></script>
   <style type="text/css">
     .icon {
@@ -158,19 +158,46 @@
     </div>
    </li>
 </ol>
-  </section>
+</section>
 
-
-  <section>
+  <section class="portfolio">
     <h2>作品集</h2>
-    <nav>
-      <ol>
-        <li>所有</li>
-        <li>框架</li>
-        <li>原生&amp;CSS</li>
+    <nav class="zpk">
+      <ol class="ZP">
+        <li id="portfolio1">所有</li>
+        <li id="portfolio2">框架</li>
+        <li id="portfolio3">原生&amp;CSS</li>
       </ol>
+      <script>
+        portfolio1.onclick=function(){
+          portfolioBar.className ='Bar state-1'
+        }
+        portfolio2.onclick=function(){
+          portfolioBar.className ='Bar state-2'
+        }
+        portfolio3.onclick=function(){
+          portfolioBar.className ='Bar state-3'
+        }
+      </script>
     </nav>
-  </section>
+    <div id="portfolioBar" class="Bar state-1">
+    <div class="Bar-inner"></div>
+    </div>
+
+  <div class="works" style="height: 597px;">
+    <div class="big" style="top: 0; left:0;">
+      <img src="./images/1.jpg"alt="作品1">
+    </div>
+    <div class="small" style="top:0; left: 645px; ">
+      <img src="./images/2.jpg"alt="作品2">
+    </div>
+    <div class="small" style="top: 319px; left: 645px; ">
+      <img src="./images/3.jpg"alt="作品3">
+      </div>
+    </div>
+  </div>
+
+</section>
 </body>
 
 </html>

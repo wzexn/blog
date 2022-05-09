@@ -36,7 +36,7 @@ li>a{
     padding-left: 16px;
     padding-right: 16px ;
     position: fixed;
-    width: 96%;
+    width: 97%;
     top:0px;
     left:0px;
 
@@ -200,7 +200,7 @@ main{
     margin-top: 60px;
 
 }
-section>h2{
+.skills>h2{
     text-align: center; 
     color:#3d4451;
     font-size: 34px;
@@ -227,7 +227,7 @@ section>h2{
 }
 
 .JNT{
-    width: 100%;
+    /* width: 940px; */
     column-count:2;
     padding: 42px 50px 10px;
 
@@ -238,5 +238,82 @@ h3{
     line-height: 1.1;
     padding-right: 40px;
 }
+.portfolio>h2{
+    text-align: center; 
+    color:#3d4451;
+    font-size: 34px;
+    line-height: 1.2;
+    font-weight: 600;
+    margin-top: 60px;
+}
 
+.portfolio{
+    max-width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-bottom: 100px;
+}
+.zpk{
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
 
+.ZP{
+    display: flex;
+    flex-direction: row;
+    width: 240px;
+    height: 24px;
+    justify-content:space-around;
+    cursor: pointer;
+}
+
+.Bar{
+    width: 240px;
+    display: inline-block;
+    vertical-align: top;
+    height: 5px;
+    background: #fff;
+    margin-top: 5px;
+    border-radius: 2px;
+    margin-bottom: 28px;
+}
+
+.Bar-inner{
+    height: 100%;
+    background: #e6686a;
+    border-radius: 2px;
+    transition: all 0.3s;
+}
+
+.Bar.state-1 .Bar-inner{
+    margin-left: 10px;
+    width: 50px;
+}
+
+.Bar.state-2 .Bar-inner{
+    margin-left: 73px;
+    width: 50px;
+}
+
+.Bar.state-3 .Bar-inner{
+    margin-left: 140px;
+    width: 100px;
+}
+
+.big>img{
+    width: 606px;
+    height: 597px;
+}
+
+.small>img{
+    width: 293px;
+    height: 278px;
+}
+.works{
+    position: relative;
+}
+.big,.small{
+    position: absolute; 
+}
