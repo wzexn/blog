@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>resume self</title>
   <script src="//at.alicdn.com/t/font_3373486_1uxpzcjtioe.js"></script>
 
@@ -45,6 +45,9 @@
         opacity: 0;
     }
 }
+
+
+
     .icon {
       width: 1em;
       height: 1em;
@@ -80,12 +83,26 @@
     </a>
   </div>
 
-  <nav>
+  <nav class="menu">
     <ul class="u">
-      <li><a href="#">关于</a></li>
-      <li><a href="#">技能</a></li>
-      <li><a href="#">作品</a></li>
-      <li><a href="#">博客</a></li>
+      <li><a href="#siteAbout">关于</a></li>
+      <li><a href="#siteSkills">技能</a></li>
+      <li>
+        <a href="#siteWorks">作品</a>
+        <ul class="submenu">
+          <li>画板</li>
+          <li>导航</li>
+          <li>简历</li>
+        </ul>
+      </li>
+      <li>
+        <a href="#">博客</a>
+        <ul class="submenu">
+          <li>简书</li>
+          <li>新浪</li>
+          <li>QQ空间</li>
+        </ul>
+      </li>
       <li><a href="#">日历</a></li>
       <li><a href="#">联系方式</a></li>
       <li><a href="#">其他</a></li>
@@ -98,7 +115,7 @@
   </div>
 
   <main>
-    <div class="usedcard">
+    <div id="siteAbout" class="usedcard">
       <div class="pictureAndtext">
         <div class="picture">
           <img src="images/headp.jpg" width="299" height="374" alt="头像">
@@ -154,7 +171,7 @@
     </p>
 
   </main>
-  <section class="skills">
+  <section id="siteSkills" class="skills">
     <h2>技能</h2>
     <ol class="JNT">
       <li>
@@ -213,7 +230,7 @@
     </ol>
   </section>
 
-  <section class="portfolio">
+  <section id="siteWorks" class="portfolio">
     <h2>作品集</h2>
     <nav class="zpk">
       <ol class="ZP">
@@ -263,6 +280,39 @@ window.onscroll = function(){
     topNavBar.classList.remove('sticky')
   }
 }
+//a标签事件监听
+let liTags = document.querySelectorAll('nav.menu > ul > li')
+//遍历哈希
+for(let i=0; i<liTags.length; i++){
+  liTags[i].onmouseenter = function(x){
+   x.currentTarget.classList.add('active')//我们监听的那个元素
+     //找兄弟↓
+ /*  let brother = li.getElementsByTagName('ul')[0]
+    brother.classList.add('active') */
+  }
+  liTags[i].onmouseleave = function(x){
+  x.currentTarget.classList.remove('active')//我们监听的那个元素
+    //找兄弟↓
+    /* let brother = li.getElementsByTagName('ul')[0]
+    brother.classList.remove('active') */
+  }
+}
+
+let aTags = document.querySelectorAll('nav.menu > ul > li > a')
+for(let i=0; i<aTags.length;i++){
+  aTags[i].onclick = function(x){
+    x.preventDefault() 
+    //函数给你的第一个参数x里有一个方法可以阻止默认动作
+    let a = x.currentTarget
+    let href = a.getAttribute('href')
+    let element = document.querySelector(href)
+    let top = element.offsetTop
+    window.scrollTo(0, top - 80)
+  
+
+  }
+}
+
   </script>
 </body>
 
